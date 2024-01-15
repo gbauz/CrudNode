@@ -1,0 +1,33 @@
+<!-- nasaImage.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/estiloblog.css">
+
+    <title>NASA Image of the Day</title>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+          <h1>Panel Administrativo</h1>
+          <nav>
+            <ul>
+              <li><a href="/crud"><i class="fas fa-users"></i> Registro de datos personales</a></li>
+              <li><a href="/busqueda"><i class="fas fa-search"></i> Buscar Usuarios</a></li>
+              <li><a href="#">Cerrar</a></li>
+            </ul>
+          </nav>
+        </aside>
+   
+    <div id="dynamic-content-container" class="content-container">
+        <h1>NASA Image of the Day</h1>
+        <img src="<%= imageData.url %>" alt="<%= imageData.title %>" width="600px" height="450px">
+        <p><strong>Title:</strong> <%= imageData.title %></p>
+        <p><strong>Date:</strong> <%= imageData.date %></p>
+        <p><strong>Explanation:</strong> <%= imageData.explanation %></p>
+    </div>
+  </div>
+</body>
+</html>
